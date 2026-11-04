@@ -1,0 +1,21 @@
+## Visual Studio / .NET
+.vs/
+**/bin/
+**/obj/
+*.user
+*.suo
+*.cache
+
+## Local configuration / secrets
+.env
+.env.*
+!*.example
+appsettings.Local.json
+
+## IDEs
+.idea/
+.vscode/
+
+## OS
+.DS_Store
+Thumbs.db
