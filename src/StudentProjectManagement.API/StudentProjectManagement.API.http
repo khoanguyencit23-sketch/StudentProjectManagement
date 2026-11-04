@@ -1,0 +1,33 @@
+@baseUrl = https://localhost:7180
+@accessToken = paste-access-token-here
+
+### Login with seeded development admin
+POST {{baseUrl}}/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@spm.local",
+  "password": "Admin@12345"
+}
+
+### Register a student account
+POST {{baseUrl}}/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "fullName": "New Student",
+  "email": "new.student@example.com",
+  "password": "Student@12345"
+}
+
+### Refresh tokens
+POST {{baseUrl}}/api/v1/auth/refresh
+Content-Type: application/json
+
+{
+  "refreshToken": "paste-refresh-token-here"
+}
+
+### Logout (requires access token)
+POST {{baseUrl}}/api/v1/auth/logout
+Authorization: Bearer {{accessToken}}
